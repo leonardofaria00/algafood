@@ -19,10 +19,10 @@
         </encoder>
     </appender>
 
-    <springProfile name="local">
+<!--    <springProfile name="local">-->
         <root level="INFO">
             <appender-ref ref="STDOUT"/>
             <appender-ref ref="PAPERTRAIL"/>
         </root>
-    </springProfile>
+<!--    </springProfile>-->
 </configuration>
