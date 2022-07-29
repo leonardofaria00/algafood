@@ -26,11 +26,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-aop'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-cache'
-    implementation "org.mapstruct:mapstruct:${mapstructVersion}"
-    implementation 'org.jetbrains:annotations:23.0.0'
     implementation "org.springframework.cloud:spring-cloud-starter-openfeign:${springCloudVersion}"
     implementation "org.springframework.cloud:spring-cloud-starter-sleuth:${springCloudVersion}"
     implementation "org.springframework.cloud:spring-cloud-sleuth-zipkin:${springCloudVersion}"
+    implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+    implementation 'org.jetbrains:annotations:23.0.0'
 
     runtimeOnly "org.mapstruct:mapstruct-processor:${mapstructVersion}"
     implementation 'io.micrometer:micrometer-registry-prometheus:1.9.2'
