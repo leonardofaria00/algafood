@@ -61,6 +61,21 @@ This project will serve as the basic architecture for implementing any spring pr
 
 To run the project it is important to meet the requirements by installing the following dependencies.
 
+Prometheus
+```
+http://localhost:9090/
+```
+
+Zipkin
+```
+http://localhost:9411/
+```
+
+Grafana
+```
+http://localhost:3000/
+```
+
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
