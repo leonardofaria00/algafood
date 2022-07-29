@@ -46,16 +46,19 @@ This project will serve as the basic architecture for implementing any spring pr
 
 - [Java 11](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
 - [Spring Boot](https://spring.io/projects/spring-boot)
-- [Feign Client](https://cloud.spring.io/spring-cloud-openfeign/reference/html/)
+- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+- [Spring Cloud Feign](https://cloud.spring.io/spring-cloud-openfeign/reference/html/)
+- [Papertrail](https://www.papertrail.com/)
+- [Prometheus](https://prometheus.io/)
+- [Grafana](https://grafana.com/)
+- [Zipkin](https://zipkin.io/)
 - [MongoDB](https://www.mongodb.com/)
 - [Swagger](https://swagger.io/)
 - [Mapper Struct](https://mapstruct.org/)
-- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
-- [Spring Boot Dev tools](https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html)
-- [RabbitMQ](https://www.rabbitmq.com/download.html)
+- [Amazon SNS](https://aws.amazon.com/pt/sns)
 - [Docker](https://www.docker.com/)
-- [Lombok](https://projectlombok.org/)
 - [Gradle](https://gradle.org/)
+- [Intellij - IDE](https://www.jetbrains.com/pt-br/idea/)
 
 ## Getting Started
 
@@ -76,12 +79,14 @@ Grafana
 http://localhost:3000/
 ```
 
+PAPERTRAIL
+```
+http://localhost:3000/
+```
+
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-
-- JDK 11
-- Intellij - IDE
 
 ### Installation
 
