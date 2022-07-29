@@ -26,9 +26,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-aop'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-cache'
+
+    implementation "org.springframework.cloud:spring-cloud-starter-bootstrap:${springCloudVersion}"
+    implementation "org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}"
     implementation "org.springframework.cloud:spring-cloud-starter-openfeign:${springCloudVersion}"
     implementation "org.springframework.cloud:spring-cloud-starter-sleuth:${springCloudVersion}"
     implementation "org.springframework.cloud:spring-cloud-sleuth-zipkin:${springCloudVersion}"
+
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
     implementation 'org.jetbrains:annotations:23.0.0'
 
