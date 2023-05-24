@@ -6,6 +6,14 @@ spring:
             label: master
             enabled: true
             uri: http://localhost:8888
+    data:
+        mongodb:
+            uri: mongodb+srv://user:<password>hostname/?connectionOptions
+            database: algafoodDB
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
 
 server:
     port: 8080
