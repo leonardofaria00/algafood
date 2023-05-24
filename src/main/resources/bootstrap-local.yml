@@ -1,36 +1,4 @@
-spring:
-    application:
-        name: alga-food-api
-    jpa:
-        show-sql: true
-
 server:
-    port: 8080
+    port: 8081
 
-logging:
-    level:
-        org:
-            springframework:
-                data:
-                    mongodb:
-                        core:
-                            MongoTemplate: DEBUG
 
-management:
-    metrics:
-        enable:
-            jvm: true
-        distribution:
-            slo:
-                http:
-                    server:
-                        requests: 50ms,100ms,200ms,300ms,1000ms,5000ms
-        tags:
-            application: alga-food-api
-    endpoint:
-        health:
-            show-details: always
-    endpoints:
-        web:
-            exposure:
-                include: info,health,metrics,prometheus
