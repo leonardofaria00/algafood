@@ -1,6 +1,11 @@
 spring:
     application:
         name: alga-food-api
+    cloud:
+        config:
+            label: master
+            enabled: true
+            uri: http://localhost:8888
 
 server:
     port: 8080
