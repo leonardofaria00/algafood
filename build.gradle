@@ -30,8 +30,8 @@ dependencies {
     implementation "org.springframework.cloud:spring-cloud-starter-bootstrap:${springCloudVersion}"
     implementation "org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}"
     implementation "org.springframework.cloud:spring-cloud-starter-openfeign:${springCloudVersion}"
-    implementation "org.springframework.cloud:spring-cloud-starter-sleuth:${springCloudVersion}"
-    implementation "org.springframework.cloud:spring-cloud-sleuth-zipkin:${springCloudVersion}"
+//    implementation "org.springframework.cloud:spring-cloud-starter-sleuth:${springCloudVersion}"
+//    implementation "org.springframework.cloud:spring-cloud-sleuth-zipkin:${springCloudVersion}"
 
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
     implementation 'org.jetbrains:annotations:23.0.0'
@@ -55,10 +55,6 @@ dependencies {
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
-
 jacoco {
     toolVersion = "0.8.5"
     reportsDir = file("$buildDir/reports/jacoco/customJacocoReportDir")
@@ -76,18 +72,6 @@ jacocoTestReport {
         getClassDirectories().setFrom(classDirectories.files.collect {
             fileTree(dir: it, exclude: [
                     'com/algaworks/algafood/Application*',
-                    'com/algaworks/algafood/application/config/*',
-                    'com/algaworks/algafood/application/controllers/exceptions/*',
-                    'com/algaworks/algafood/application/controllers/validation/model/ResponseMessageSet*',
-                    'com/algaworks/algafood/application/controllers/validation/aspect/DeviceValidationAspect*',
-                    'com/algaworks/algafood/application/controllers/validation/aspect/ValidateHeaderNotBlankHandlerMethodArgumentResolver',
-                    'com/algaworks/algafood/domain/data*',
-                    'com/algaworks/algafood/domain/utils/*',
-                    'com/algaworks/algafood/domain/exception/*',
-                    'com/algaworks/algafood/domain/config/*',
-                    'com/algaworks/algafood/domain/mapper/*',
-                    'com/algaworks/algafood/infrastructure/mappers*',
-                    'com/algaworks/algafood/infrastructure/data*',
             ])
         })
     }
@@ -104,19 +88,10 @@ jacocoTestCoverageVerification {
             }
             excludes = [
                     'com.algaworks.algafood.Application',
-                    'com.algaworks.algafood.application.config.*',
-                    'com.algaworks.algafood.application.controllers.exceptions.*',
-                    'com.algaworks.algafood.application.controllers.validation.model.ResponseMessageSet*',
-                    'com.algaworks.algafood.application.controllers.validation.aspect.DeviceValidationAspect*',
-                    'com.algaworks.algafood.application.controllers.validation.aspect.ValidateHeaderNotBlankHandlerMethodArgumentResolver',
-                    'com.algaworks.algafood.domain.data.*',
-                    'com.algaworks.algafood.domain.utils.*',
-                    'com.algaworks.algafood.domain.exception.*',
-                    'com.algaworks.algafood.domain.config.*',
-                    'com.algaworks.algafood.domain.mapper.*',
-                    'com.algaworks.algafood.infrastructure.mappers.*',
-                    'com.algaworks.algafood.infrastructure.data.*',
             ]
         }
     }
 }
+
+jacocoTestCoverageVerification.mustRunAfter jacocoTestReport
+
