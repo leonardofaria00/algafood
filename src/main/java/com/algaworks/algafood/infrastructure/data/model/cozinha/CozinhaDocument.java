@@ -18,9 +18,12 @@ public class CozinhaDocument extends Model {
     @Indexed
     private String uuid;
 
+    private String name;
+
     private LocalDateTime createDate;
 
     private LocalDateTime updateDate;
+
 
     public ObjectId getId() {
         return id;
@@ -36,6 +39,14 @@ public class CozinhaDocument extends Model {
 
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public LocalDateTime getCreateDate() {

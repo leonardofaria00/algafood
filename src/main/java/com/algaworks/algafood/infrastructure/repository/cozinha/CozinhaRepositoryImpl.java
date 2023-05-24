@@ -26,6 +26,7 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
             logger.info("Trying to create kitchen");
             CozinhaDocument document = new CozinhaDocument();
             document.setUuid(UuidProvider.getUuid());
+            document.setName(String.valueOf(Math.random()));
             document.setCreateDate(DataProvider.getLocalDateTime());
             document.setUpdateDate(DataProvider.getLocalDateTime());
             mongoRepository.save(document);
